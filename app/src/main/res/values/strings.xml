@@ -1,0 +1,5 @@
+<resources>
+    <string name="aboutApp">This application facilitate users a task manager with priority levels,         users can add their own task here and it will be listed.</string>
+    <string name="app_name">To Do List</string>
+    <string name="addButton">Add Button for add new ToDoList</string>
+</resources>

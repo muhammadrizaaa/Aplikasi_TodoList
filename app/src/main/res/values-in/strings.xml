@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aboutApp">Aplikasi ini memfasilitasi pengguna sebuah pengatur tugas dengan level prioritas, pengguna dapat menambah tugas mereka sendiri dan akan menjadi list.</string>
+    <string name="app_name">To Do List</string>
+    <string name="addButton">Tombol Tambah untuk menambah ToDoList</string>
+</resources>
