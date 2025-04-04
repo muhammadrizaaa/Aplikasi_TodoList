@@ -2,5 +2,24 @@
 <resources>
     <string name="aboutApp">Aplikasi ini memfasilitasi pengguna sebuah pengatur tugas dengan level prioritas, pengguna dapat menambah tugas mereka sendiri dan akan menjadi list.</string>
     <string name="app_name">To Do List</string>
-    <string name="addButton">Tombol Tambah untuk menambah ToDoList</string>
+
+    <string name="addButtonDesc">Tombol Tambah untuk menambah ToDoList</string>
+    <string name="backButtonDesc">Tombol anak panah untuk navigasi kembali</string>
+
+    <string name="addButton">Tambah ToDoList baru</string>
+    <string name="aboutAppButton">Tentang aplikasi ini</string>
+
+    <string name="addToDoListFromTitle">Tambah To Do List Baru</string>
+
+    <string name="LabelTextFieldTitle">Judul</string>
+    <string name="LabelTextFieldContent">Isi</string>
+    <string name="LabelTextFieldPriority">Prioritas</string>
+
+    <string name="firstPriority">Urgen</string>
+    <string name="secondPriority">Sedang</string>
+    <string name="thirdPriority">Tidak Penting</string>
+
+    <string name="priorityContentDesc">Gambar Dari Prioritas %1$s</string>
+
+    <string name="submitButtonAddToDoList">Tambah</string>
 </resources>

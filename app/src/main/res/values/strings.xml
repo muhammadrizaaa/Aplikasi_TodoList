@@ -1,5 +1,24 @@
 <resources>
     <string name="aboutApp">This application facilitate users a task manager with priority levels,         users can add their own task here and it will be listed.</string>
     <string name="app_name">To Do List</string>
-    <string name="addButton">Add Button for add new ToDoList</string>
+
+    <string name="addButtonDesc">Add Button for add new ToDoList</string>
+    <string name="backButtonDesc">Arrow button for navigate back</string>
+
+    <string name="addButton">Add new ToDoList</string>
+    <string name="aboutAppButton">About this app</string>
+
+    <string name="addToDoListFromTitle">Add New To Do List</string>
+
+    <string name="LabelTextFieldTitle">Title</string>
+    <string name="LabelTextFieldContent">Content</string>
+    <string name="LabelTextFieldPriority">Priority</string>
+
+    <string name="firstPriority">Urgent</string>
+    <string name="secondPriority">Moderate</string>
+    <string name="thirdPriority">Unimportant</string>
+
+    <string name="priorityContentDesc">Image Of %1$s Priority</string>
+
+    <string name="submitButtonAddToDoList">Add</string>
 </resources>
