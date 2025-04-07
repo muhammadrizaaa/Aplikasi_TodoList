@@ -4,12 +4,14 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.riza0004.todolist.navigation.SetupNavGraph
 import com.riza0004.todolist.ui.theme.ToDoListTheme
+import com.riza0004.todolist.viewModel.ToDoListViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +19,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ToDoListTheme {
-                SetupNavGraph()
+                val toDoList by viewModels<ToDoListViewModel>()
+                SetupNavGraph(toDoListViewModel = toDoList)
             }
         }
     }

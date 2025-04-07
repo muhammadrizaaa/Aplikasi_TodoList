@@ -44,11 +44,13 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.riza0004.todolist.R
 import com.riza0004.todolist.dataClass.PriorityDataClass
+import com.riza0004.todolist.navigation.Screen
 import com.riza0004.todolist.ui.theme.ToDoListTheme
+import com.riza0004.todolist.viewModel.ToDoListViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AddToDoListFormScreen(navController: NavHostController){
+fun AddToDoListFormScreen(navController: NavHostController, toDoListViewModel: ToDoListViewModel){
     Scaffold(
         topBar = {
             TopAppBar(
@@ -70,11 +72,11 @@ fun AddToDoListFormScreen(navController: NavHostController){
             )
         }
     ) { innerPadding ->
-        AddToDoListFormContent(Modifier.padding(innerPadding))
+        AddToDoListFormContent(Modifier.padding(innerPadding), toDoListViewModel, navController = navController)
     }
 }
 @Composable
-fun AddToDoListFormContent(modifier: Modifier){
+fun AddToDoListFormContent(modifier: Modifier, toDoListViewModel: ToDoListViewModel, navController: NavHostController){
     var title by remember { mutableStateOf("") }
     var content by remember { mutableStateOf("") }
     val radioOpt:List<PriorityDataClass> = listOf(
@@ -114,7 +116,10 @@ fun AddToDoListFormContent(modifier: Modifier){
             }
 
             Button(
-                onClick = {},
+                onClick = {
+                    toDoListViewModel.addToDoList(title = title, content = content, priority = priority, isDone = false)
+                    navController.navigate(Screen.Home.route)
+                },
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.primaryContainer)
             ) {
@@ -156,6 +161,6 @@ fun PriorityOpt(isSelected: Boolean, modifier: Modifier, img: Painter, label: St
 @Composable
 fun AddToDoListFormPreview() {
     ToDoListTheme {
-        AddToDoListFormScreen(rememberNavController())
+        AddToDoListFormScreen(rememberNavController(), ToDoListViewModel())
     }
 }

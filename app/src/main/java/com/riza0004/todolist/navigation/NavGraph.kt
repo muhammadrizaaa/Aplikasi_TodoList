@@ -7,18 +7,19 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.riza0004.todolist.screen.AddToDoListFormScreen
 import com.riza0004.todolist.screen.MainScreen
+import com.riza0004.todolist.viewModel.ToDoListViewModel
 
 @Composable
-fun SetupNavGraph(navController: NavHostController = rememberNavController()){
+fun SetupNavGraph(navController: NavHostController = rememberNavController(), toDoListViewModel: ToDoListViewModel){
     NavHost(
         navController = navController,
         startDestination = Screen.Home.route
     ) {
         composable(route = Screen.Home.route){
-            MainScreen(navController)
+            MainScreen(navController, toDoListViewModel)
         }
         composable(route = Screen.AddToDoList.route){
-            AddToDoListFormScreen(navController)
+            AddToDoListFormScreen(navController, toDoListViewModel)
         }
     }
 }

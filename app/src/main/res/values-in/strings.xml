@@ -5,9 +5,13 @@
 
     <string name="addButtonDesc">Tombol Tambah untuk menambah ToDoList</string>
     <string name="backButtonDesc">Tombol anak panah untuk navigasi kembali</string>
+    <string name="threeDotButtonDesc">Tombol 3 Titik Untuk Dropdown</string>
 
     <string name="addButton">Tambah ToDoList baru</string>
     <string name="aboutAppButton">Tentang aplikasi ini</string>
+    <string name="deleteButton">Hapus</string>
+    <string name="doneButton">Tandai Sudah Selesai</string>
+    <string name="notDoneButton">Tandai Belum Selesai</string>
 
     <string name="addToDoListFromTitle">Tambah To Do List Baru</string>
 
@@ -22,4 +26,11 @@
     <string name="priorityContentDesc">Gambar Dari Prioritas %1$s</string>
 
     <string name="submitButtonAddToDoList">Tambah</string>
+
+    <string name="titleDoneMainScreen">Selesai %1$d</string>
+    <string name="titleNotDoneMainScreen">Belum Selesai %1$d</string>
+    <string name="dataNotFound">Data tidak ditemukan</string>
+
+    <string name="dataIsEmptyTitle">List Masih Kosong</string>
+    <string name="dataIsEmptyBody">Tekan tombol titik tiga untuk menambah item baru.</string>
 </resources>
