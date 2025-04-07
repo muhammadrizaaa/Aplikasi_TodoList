@@ -18,6 +18,7 @@
     <string name="LabelTextFieldTitle">Title</string>
     <string name="LabelTextFieldContent">Content</string>
     <string name="LabelTextFieldPriority">Priority</string>
+    <string name="errorMessageAddToDoList">Fill the field properly.</string>
 
     <string name="firstPriority">Urgent</string>
     <string name="secondPriority">Moderate</string>

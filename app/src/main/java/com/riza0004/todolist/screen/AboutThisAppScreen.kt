@@ -62,7 +62,7 @@ fun AboutThisAppContent(modifier: Modifier){
         modifier = modifier.fillMaxSize().padding(8.dp)
     ) {
         Column(
-            modifier = Modifier.fillMaxSize().padding(8.dp, top = 36.dp),
+            modifier = Modifier.fillMaxSize().padding(8.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(

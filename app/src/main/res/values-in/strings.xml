@@ -18,6 +18,7 @@
     <string name="LabelTextFieldTitle">Judul</string>
     <string name="LabelTextFieldContent">Isi</string>
     <string name="LabelTextFieldPriority">Prioritas</string>
+    <string name="errorMessageAddToDoList">Isi field dengan benar.</string>
 
     <string name="firstPriority">Urgen</string>
     <string name="secondPriority">Sedang</string>

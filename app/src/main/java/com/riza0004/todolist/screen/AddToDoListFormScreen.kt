@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -39,6 +40,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -86,21 +88,38 @@ fun AddToDoListFormContent(modifier: Modifier, toDoListViewModel: ToDoListViewMo
         PriorityDataClass(priorityStr = stringResource(R.string.thirdPriority), priorityInt = 2, imageResId = R.drawable.unimportant, img = painterResource(R.drawable.unimportant))
     )
     var priority by remember { mutableIntStateOf(0) }
-    Box(modifier.fillMaxSize().padding(8.dp)){
+    var titleErr by remember{ mutableStateOf(false) }
+    var contentErr by remember{ mutableStateOf(false) }
+    Box(modifier
+        .fillMaxSize()
+        .padding(8.dp)){
         Column(
-            modifier = Modifier.padding(16.dp).fillMaxSize().verticalScroll(rememberScrollState())
+            modifier = Modifier
+                .padding(16.dp)
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
         ) {
             OutlinedTextField(
                 value = title,
                 onValueChange = {title = it},
                 modifier = Modifier.fillMaxWidth(),
-                label = { Text(stringResource(R.string.LabelTextFieldTitle)) }
+                label = { Text(stringResource(R.string.LabelTextFieldTitle)) },
+                isError = titleErr,
+                supportingText = { ErrorMessage(titleErr) },
+                keyboardOptions = KeyboardOptions(
+                    imeAction = ImeAction.Next
+                )
             )
             OutlinedTextField(
                 value = content,
                 onValueChange = {content = it},
                 modifier = Modifier.fillMaxWidth(),
-                label = { Text(stringResource(R.string.LabelTextFieldContent)) }
+                label = { Text(stringResource(R.string.LabelTextFieldContent)) },
+                isError = contentErr,
+                supportingText = { ErrorMessage(contentErr) },
+                keyboardOptions = KeyboardOptions(
+                    imeAction = ImeAction.Done
+                )
             )
 
             radioOpt.forEach { priorityData ->
@@ -118,8 +137,12 @@ fun AddToDoListFormContent(modifier: Modifier, toDoListViewModel: ToDoListViewMo
 
             Button(
                 onClick = {
-                    toDoListViewModel.addToDoList(title = title, content = content, priority = priority, isDone = false)
-                    navController.navigate(Screen.Home.route)
+                    titleErr = title.isBlank()
+                    contentErr = content.isBlank()
+                    if(!titleErr && !contentErr){
+                        toDoListViewModel.addToDoList(title = title, content = content, priority = priority, isDone = false)
+                        navController.navigate(Screen.Home.route)
+                    }
                 },
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.buttonColors(MaterialTheme.colorScheme.primaryContainer)
@@ -142,7 +165,9 @@ fun PriorityOpt(isSelected: Boolean, modifier: Modifier, img: Painter, label: St
     ) {
         RadioButton(selected = isSelected, onClick = null)
         Column(
-            modifier = Modifier.width(100.dp). padding(start = 4.dp),
+            modifier = Modifier
+                .width(100.dp)
+                .padding(start = 4.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
@@ -154,6 +179,16 @@ fun PriorityOpt(isSelected: Boolean, modifier: Modifier, img: Painter, label: St
                 text = label
                 )
         }
+    }
+}
+
+@Composable
+fun ErrorMessage(isError: Boolean){
+    if(isError){
+        Text(
+            text = stringResource(R.string.errorMessageAddToDoList),
+
+        )
     }
 }
 
