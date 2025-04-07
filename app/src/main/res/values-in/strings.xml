@@ -33,4 +33,14 @@
 
     <string name="dataIsEmptyTitle">List Masih Kosong</string>
     <string name="dataIsEmptyBody">Tekan tombol titik tiga untuk menambah item baru.</string>
+
+    <string name="topbarAboutThisApp">Tentang Aplikasi Ini</string>
+    <string name="titleAboutThisApp">Aplikasi ToDoLizz</string>
+    <string name="contentAboutThisApp">Aplikasi ini memiliki tujuan untuk membuat list keseharian
+        pengguna. Fitur dari aplikasi ini utamanya adalah membuat list keseharian pengguna dan juga
+        mengatur list keseharian pengguna, seperti item mana yang kebih penting, pengguna dapat
+        mengatur nya, dan juga cek item jika sudah dilakukan. Jadi aplikasi ini akan sangat membantu
+        orang-orang diluar sana yang membutuhkan list untuk hal-hal yang perlu mereka lakukan.</string>
+
+    <string name="rights">Hak Cipta © 2025 Riza. Hak Cipta Dilindungi Undang-Undang.</string>
 </resources>

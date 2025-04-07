@@ -33,4 +33,12 @@
 
     <string name="dataIsEmptyTitle">The List Still Empty</string>
     <string name="dataIsEmptyBody">Click the three dot icon in the top right corner to add a new item.</string>
+
+    <string name="topbarAboutThisApp">About This App</string>
+    <string name="titleAboutThisApp">ToDoLizz Application.</string>
+    <string name="contentAboutThisApp">This is an application for list your to do list. The features
+        in this app are mainly about listing your own to do list and also managing it, like which
+        item is more important, you can manage it here, and also check the item if its already done.
+        So this application will be helpful for people who needs to list their own things to do.</string>
+    <string name="rights">Copyright © 2025 Riza. All Right Reserved.</string>
 </resources>

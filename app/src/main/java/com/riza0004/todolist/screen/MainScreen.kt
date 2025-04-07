@@ -1,7 +1,6 @@
 package com.riza0004.todolist.screen
 
 import android.content.res.Configuration
-import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -40,7 +39,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -62,7 +60,6 @@ fun MainScreen(
     toDoListViewModel: ToDoListViewModel
     ){
     var expanded by remember { mutableStateOf(false) }
-    val context = LocalContext.current
     Scaffold(
         topBar = { TopAppBar(
             title = { Text(stringResource(R.string.app_name))},
@@ -96,7 +93,7 @@ fun MainScreen(
                                 text = { Text(stringResource(R.string.aboutAppButton)) },
                                 onClick = {
                                     expanded = false
-                                    Toast.makeText(context, "About Clicked", Toast.LENGTH_SHORT).show()
+                                    navController.navigate(Screen.AboutThisApp.route)
                                 }
                             )
                         }

@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.verticalScroll
@@ -141,7 +142,7 @@ fun PriorityOpt(isSelected: Boolean, modifier: Modifier, img: Painter, label: St
     ) {
         RadioButton(selected = isSelected, onClick = null)
         Column(
-            modifier = Modifier.padding(horizontal = 8.dp),
+            modifier = Modifier.width(100.dp). padding(start = 4.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
