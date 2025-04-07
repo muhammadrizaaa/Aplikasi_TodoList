@@ -1,6 +1,7 @@
 package com.riza0004.todolist.screen
 
 import android.content.res.Configuration
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -51,7 +52,6 @@ import com.riza0004.todolist.dataClass.ToDoListDataClass
 import com.riza0004.todolist.navigation.Screen
 import com.riza0004.todolist.ui.theme.ToDoListTheme
 import com.riza0004.todolist.viewModel.ToDoListViewModel
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -165,7 +165,9 @@ fun ScreenContent(
                     }
                 }
                 LazyColumn(
-                    modifier = (if(isNotDoneExpanded.value){Modifier.wrapContentHeight()} else{Modifier.height(0.dp)}),
+                    modifier = (if(isNotDoneExpanded.value){Modifier.wrapContentHeight()} else{Modifier.height(0.dp)})
+                        .animateContentSize()
+                    ,
                     verticalArrangement = Arrangement.SpaceBetween
                 ) {
                     items(sortedList){
@@ -193,7 +195,9 @@ fun ScreenContent(
                     }
                 }
                 LazyColumn(
-                    modifier = (if(isDoneExpanded.value){Modifier.wrapContentHeight()} else{Modifier.height(0.dp)}),
+                    modifier = (if(isDoneExpanded.value){Modifier.wrapContentHeight()} else{Modifier.height(0.dp)})
+                        .animateContentSize()
+                    ,
                     verticalArrangement = Arrangement.SpaceBetween
                 ) {
                     items(sortedList){
