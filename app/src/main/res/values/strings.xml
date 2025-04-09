@@ -25,12 +25,18 @@
     <string name="thirdPriority">Unimportant</string>
 
     <string name="priorityContentDesc">Image Of %1$s Priority</string>
+    <string name="deleteIconDesc">Icon with image of rubbish.</string>
 
     <string name="submitButtonAddToDoList">Add</string>
 
     <string name="titleDoneMainScreen">Done %1$d</string>
     <string name="titleNotDoneMainScreen">Not Done %1$d</string>
     <string name="dataNotFound">Data Not Found</string>
+
+    <string name="titleForDialogDelete">Delete This Item</string>
+    <string name="contentForDialogDelete">Are you sure you want to delete this item?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <string name="dataIsEmptyTitle">The List Still Empty</string>
     <string name="dataIsEmptyBody">Click the three dot icon in the top right corner to add a new item.</string>

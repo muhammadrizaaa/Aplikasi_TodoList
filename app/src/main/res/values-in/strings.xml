@@ -25,12 +25,18 @@
     <string name="thirdPriority">Tidak Penting</string>
 
     <string name="priorityContentDesc">Gambar Dari Prioritas %1$s</string>
+    <string name="deleteIconDesc">Ikon bergambar tempat sampah.</string>
 
     <string name="submitButtonAddToDoList">Tambah</string>
 
     <string name="titleDoneMainScreen">Selesai %1$d</string>
     <string name="titleNotDoneMainScreen">Belum Selesai %1$d</string>
     <string name="dataNotFound">Data tidak ditemukan</string>
+
+    <string name="titleForDialogDelete">Hapus Item Ini</string>
+    <string name="contentForDialogDelete">Apakah anda yakin untuk menghapus item ini?</string>
+    <string name="yes">Iya</string>
+    <string name="no">Tidak</string>
 
     <string name="dataIsEmptyTitle">List Masih Kosong</string>
     <string name="dataIsEmptyBody">Tekan tombol titik tiga untuk menambah item baru.</string>
